@@ -65,9 +65,9 @@ Task 4
 When a user clicks the ‘Add some text’ button, a new paragraph should be added inside the section that says “LEARN MORE”
 */
 const newP = document.querySelector("#addTextBtn");
-newP.addEventListener("click", masInf);
+newP.addEventListener("click", moreInf);
 
-function masInf(){
+function moreInf(){
     const parrafoN = document.createElement ("p");
     mainArticles.appendChild (parrafoN);
     parrafoN.innerText = ("Este es el nuevo párrafo.");
@@ -79,11 +79,11 @@ Task 5
 
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
-/*
+
 const largerLinksBtn = document.querySelector("#largerLinksBtn");
-const as = document.querySelectorAll("a");
+const links = document.querySelectorAll("a");
 largerLinksBtn.addEventListener("click",e=>{
-    as.forEach(element => {
+    links.forEach(element => {
         element.style.fontSize = "x-large";
     });
 })
