@@ -59,34 +59,19 @@ function changeColor(){
 }
 
 /*
-const pantallaC = ["blue"];
-const index = 0;
-const bColor = document.querySelector("#bgrChangeBtn");
-bColor.addEventListener("click", colorB);
-function colorB(){
-    const body = document.querySelector("body");
-    if(index >= pantallaC.length){
-        index = 0
-    }
-    body.style.backgroundColor = pantallaC [index];
-}
-
-/*
 Task 4
 ======
 
 When a user clicks the ‘Add some text’ button, a new paragraph should be added inside the section that says “LEARN MORE”
 */
-/*
-const addTextBtn = document.querySelector("#addTextBtn");
-const mainArticles = document.querySelector("#mainArticles");
-const newp = document.createElement("p");
-newp.textContent = "This is a new paragraph!!!! ************************************";
-addTextBtn.addEventListener("click", e => {
-    e.preventDefault();
-    mainArticles.appendChild(newp);
-})
+const newP = document.querySelector("#addTextBtn");
+newP.addEventListener("click", masInf);
 
+function masInf(){
+    const parrafoN = document.createElement ("p");
+    mainArticles.appendChild (parrafoN);
+    parrafoN.innerText = ("Este es el nuevo párrafo.");
+}
 
 /*
 Task 5
