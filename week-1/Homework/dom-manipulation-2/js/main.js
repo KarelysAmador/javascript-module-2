@@ -42,7 +42,7 @@ Clicking on the buttons should change the "theme" of the website:
 
 Here's an example of how the website should look for the blue button:
 
-![Blue button example](images/blue_clicked.png)
+[Blue button example](images/blue_clicked.png)
 */
 constbtnGreenEl=document.querySelector("#greenBtn");
 btnGreenEl.addEventListener("click",e=>{
