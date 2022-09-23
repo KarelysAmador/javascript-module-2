@@ -78,17 +78,21 @@ constnameEl=document.querySelector("#example-text-input");
 constemailEl=document.querySelector("#exampleInputEmail1");
 constdescribeEl=document.querySelector("#exampleTextarea");
 
-functionnonEmpty(text){
+functionnonEmpty(text) 
+{
     console.log(text,text.length);
     returntext.length>0;
 }
 
-functionmarkColor(element,color){
+functionmarkColor(element,color)
+
+{
     console.log("validating..",element);
     element.style.background=color;
 }
 
-functionblankOut(elements){
+functionblankOut(elements) 
+{
     elements.forEach(element=>{
         element.textContent="";
         markColor(element,"white");
@@ -97,7 +101,8 @@ functionblankOut(elements){
     
 }
 
-functionvalidate(elements,validator,coloring){
+functionvalidate(elements,validator,coloring)
+{
     letvalid=true;
     elements.forEach(element=>{
         if(!validator(element.value)){
