@@ -11,6 +11,7 @@ let house = {
     firstName: "Georgina",
     lastName: "Hernandez",
   },
+ isForSale: false,
 };
 
 let newCurrentOwner = {
@@ -18,6 +19,9 @@ let newCurrentOwner = {
   lastName: "Hernandez",
 };
 
+
+house.currentOwner = newCurrentOwner;
+house.previousOwners[1] = "Stephen B.";
 /*
   DO NOT EDIT ANYTHING ABOVE THIS LINE
 
