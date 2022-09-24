@@ -17,3 +17,35 @@ var car = {
 
 */
 
+
+
+
+const student = {
+    name: "Karelys",
+    lastname: "Amador",
+    age: "27"
+};
+
+const teacher = {
+    name: "Edu",
+    lastName: "Bargues",
+    age: "30"
+};
+
+const car = {
+    brand: "Chevrolet",
+    model: "Spark",
+    age: "2022"
+};
+
+const cookie = {
+    brand: "Oreo",
+    flavor: "original",
+    size: "large"
+};
+
+const phone = {
+    brand: "Apple",
+    model: "iPhone 12 Pro",
+    color: "gold"
+};
