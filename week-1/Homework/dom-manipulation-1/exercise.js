@@ -97,7 +97,6 @@ When the 'Add' button is clicked, get the text inside the input field and create
 Also clear the text inside the input field
 */
 
-/*
 const addTextBtn2 = document.querySelector("#addArticleBtn");
 const mainArticles2 = document.querySelector("#mainArticles");
 const textBox = document.querySelector(".addArticle");
@@ -111,6 +110,7 @@ addTextBtn2.addEventListener("click", e => {
     mainArticles2.appendChild(newp1);
     textBox.value = "";
 })
+
 /*
 Task 7
 ======
@@ -119,7 +119,7 @@ Create an array of 5 different colors.
 Using the same function in Task 3, every time the 'Change colour' button is clicked, the background color will be changed with the next color in the array.
 The next color when you are in the last color of the array will be the first color again.
 */
-/*
+
 const myColors = ["green","yellow","black","white","pink"]
 let count = 0;
 changeColor.addEventListener("click", e => {
@@ -132,4 +132,3 @@ changeColor.addEventListener("click", e => {
         count = 0;
     }
 })
-*/
