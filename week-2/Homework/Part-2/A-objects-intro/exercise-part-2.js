@@ -19,4 +19,4 @@ var phone = {
     hasStylus: true,
     megapixels: "12", 
     batteryLife: "24 hours"
-}
+};
