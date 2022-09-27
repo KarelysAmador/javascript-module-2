@@ -126,7 +126,7 @@ changeColor.addEventListener("click", e => {
     e.preventDefault();
     body.style.background = myColors[count];
 
-    if (count < 4){
+    if (count < 5){
         count ++;
     } else {
         count = 0;
