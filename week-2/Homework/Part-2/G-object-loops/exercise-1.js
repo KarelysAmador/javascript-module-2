@@ -12,20 +12,11 @@ const studentGrades = {
 // TOM - 20
 // ABDUL - 19
 
-const students = Object.keys(studentGrades);
-const grades = Object.values(studentGrades);
-const studentGradesList = Object.entries(studentGrades);
-console.log("studentGrades", studentGrades);
-
-function moreThan18(num) {
-  return num > 18;
-}
-var moreThan18List = (list) => {
-  return list.filter((element) => moreThan18(element[1]));
-};
-
-const result = moreThan18List(studentGradesList);
-
-for (let i = 0; i < result.length; i++) {
-  console.log(`${result[i][0]} - ${result[i][1]}`);
-}
+  const studentKey = Object.keys(studentGrades);
+  const studentvalues = Object.values(studentGrades);
+  
+  studentvalues.forEach((studentvalues, key) =>{
+    if (studentvalues >= 18 ){
+    console.log(`${studentKey[key].toUpperCase()} - ${studentvalues}`);
+    }
+})
