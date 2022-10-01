@@ -1,59 +1,77 @@
-const jumButtom = document.querySelector('.jumbotron')
-const primaryButtom = document.querySelector('.btn-lrg')
-const secundaryButtom = document.querySelector('.btn-secondary')
-console.log(primaryButtom);
+const jumbotron = document.querySelector(".jumbotron");
+const donateABike = document.querySelector(".buttons .btn-primary");
+const volunteer = document.querySelector(".buttons .btn-secondary");
 
-const blueButton = document.querySelector('#blueBtn')
-blueButton.addEventListener('click',()=>{
-    jumButtom.style.backgroundColor = '#588fbd'
-    primaryButtom.style.backgroundColor = '#ffa500'
-    secundaryButtom.style.backgroundColor = 'black'
-    secundaryButtom.style.color = 'white'
-} )
+const blueButton = document.querySelector("#blueBtn")
+blueButton.addEventListener("click", changeBlue)
 
-const orangeButton = document.querySelector('#orangeBtn')
-orangeButton.addEventListener('click',()=>{
-    jumButtom.style.backgroundColor = '#f0ad4e'
-    primaryButtom.style.backgroundColor = '#5751fd'
-    secundaryButtom.style.backgroundColor = '#31b0d5'
-    secundaryButtom.style.color = 'white'
-} )
-
-const greenButton = document.querySelector('#greenBtn')
-greenButton.addEventListener('click',()=>{
-    jumButtom.style.backgroundColor = '#87ca8a'
-    primaryButtom.style.backgroundColor = 'black'
-    secundaryButtom.style.backgroundColor = '#8c9c08'
-} )
-
-const formulario = document.querySelector('form')
-
-const emailInput= document.querySelector('#exampleInputEmail1')
-const nameInput= document.querySelector('#example-text-input')
-const descriptionInput= document.querySelector('#exampleTextarea')
-const verificarInputs = (input) => input.value.length == 0  
-
-formulario.addEventListener('submit',(e) => {
-    e.preventDefault()
-
-   
-    if (!verificarInputs(emailInput) && !verificarInputs(nameInput) && !verificarInputs(descriptionInput) && emailInput.value.includes('@')) {
-      const inputs = [emailInput,nameInput,descriptionInput]
-       inputs.forEach((input)=> {
-           input.style.backgroundColor = 'white'
-           input.value = ''
-       } ) 
-        alert('thank you for filling out the form')
-
-    } else {
-    if (verificarInputs(emailInput) || !emailInput.value.includes('@')) {
-        emailInput.style.backgroundColor = 'red'
-    }
-    if (verificarInputs(nameInput)) {
-        nameInput.style.backgroundColor = 'red'
-    }
-    if (verificarInputs(descriptionInput)) {
-        descriptionInput.style.backgroundColor = 'red'
-    }
+function changeBlue () {
+jumbotron.style.backgroundColor = "#588fbd";
+donateABike.style.backgroundColor = "#ffa500";
+volunteer.style.backgroundColor = "black";
+volunteer.style.color = "white";
 }
+
+const orangeButton = document.querySelector("#orangeBtn")
+orangeButton.addEventListener("click", changeOrange)
+
+function changeOrange () {
+jumbotron.style.background = "#f0ad4e";
+donateABike.style.backgroundColor = "#5751fd";
+volunteer.style.backgroundColor = "#31b0d5";
+volunteer.style.color = "white";
+
+}
+
+const greenButton = document.querySelector("#greenBtn")
+greenButton.addEventListener("click", changeGreen)
+
+function changeGreen () {
+jumbotron.style.backgroundColor = "#87ca8a";
+donateABike.style.backgroundColor = "black";
+volunteer.style.backgroundColor = "#8c9c08";
+
+}
+
+/* DOM-MANUPLATION 2 PART 2 */
+
+const submitButton = document.querySelector("form button")
+submitButton.addEventListener("click", (event) => {
+    event.preventDefault();
+   
+
+    const emailInput = document.querySelector("#exampleInputEmail1")
+    const email = emailInput.value
+    const isEmailValid = email.length > 0 && email.includes("@")
+    if (isEmailValid === false) {
+        emailInput.style.background = "red"
+    } else {
+        emailInput.style.background = "white"
+    }
+
+    const nameInput = document.querySelector("#example-text-input")
+    const name = nameInput.value
+    const isNameValid = name.length > 0
+    if (isNameValid === false) {
+        nameInput.style.background = "red"
+    } else {
+        nameInput.style.background = "white"
+    }
+
+    const personalDescriptionInput = document.querySelector("#exampleTextarea")
+    const personalDescription = personalDescriptionInput.value
+    const isPersonalDescriptionValid = personalDescription.length > 0
+    if (isPersonalDescriptionValid === false) {
+        personalDescriptionInput.style.background = "red"
+    } else {
+        personalDescriptionInput.style.background = "white"
+    }
+
+    const isEverythingValid = isEmailValid && isNameValid && isPersonalDescriptionValid 
+    if (isEverythingValid) {
+        window.alert("thank you for filling out the form") 
+        emailInput.value=""
+        nameInput.value=""
+        personalDescriptionInput.value=""
+    }
 })
